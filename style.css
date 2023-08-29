@@ -1,0 +1,31 @@
+*{
+    font-size: 25px;
+    font-family: 'Kanit', sans-serif;    
+}
+
+ul{
+    background-color: #7F5EC1;
+    border-top: 1PX solid white;
+}
+
+.h1{
+    text-align: center;
+    /*border: 1px solid red;*/
+    background-color: #7F5EC1;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top:0;
+    padding-bottom:0 
+    
+}
+.li__1,.li__2,.li__3,.li__4,.li__5,.li__6,.li__7{
+    padding-top: 0;
+    padding-bottom: 0;
+    display: inline;
+    border: 1px solid whitesmoke;    
+}
+
+div{
+    padding:0;
+    margin:0;
+}
