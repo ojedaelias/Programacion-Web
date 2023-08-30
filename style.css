@@ -4,13 +4,14 @@
 }
 
 .background{ /*imagen de fondo*/
-    position: fixed;
+    position:fixed;
     top: 0;
     background-size: cover; /*Se asegura que la img cubra todo el contenedor*/
     filter: blur(3px); /* Aplica el filtro solo al contenedor de fondo */
     z-index: -1; /* Coloca el contenedor detrás del contenido */
     
 }
+
 
 header{
     text-align: center;
