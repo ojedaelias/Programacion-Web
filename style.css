@@ -1,31 +1,75 @@
 *{
     font-size: 25px;
-    font-family: 'Kanit', sans-serif;    
+    font-family: 'Kanit', sans-serif;       
 }
 
-ul{
-    background-color: #7F5EC1;
-    border-top: 1PX solid white;
-}
-
-.h1{
-    text-align: center;
-    /*border: 1px solid red;*/
-    background-color: #7F5EC1;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top:0;
-    padding-bottom:0 
+.background{ /*imagen de fondo*/
+    position: fixed;
+    top: 0;
+    background-size: cover; /*Se asegura que la img cubra todo el contenedor*/
+    filter: blur(3px); /* Aplica el filtro solo al contenedor de fondo */
+    z-index: -1; /* Coloca el contenedor detrás del contenido */
     
 }
-.li__1,.li__2,.li__3,.li__4,.li__5,.li__6,.li__7{
-    padding-top: 0;
-    padding-bottom: 0;
-    display: inline;
-    border: 1px solid whitesmoke;    
+
+header{
+    text-align: center;
+    top: 0;
 }
 
-div{
-    padding:0;
-    margin:0;
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
 }
+
+nav ul li{
+    display: inline-block;
+    border-radius: 10px; /*Redondea los bordes de los items*/
+    margin: 5px; /* Espaciado entre los elementos del menú */
+    background-color: #ffffff5a; /* Color de fondo de los elementos */
+}
+    
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 10px 20px; /* Ajusta el relleno para espacio alrededor del texto */
+    display: block; /*Dentro de la caja ocupa todo el espacio*/
+    cursor: pointer;
+    border-radius:10px;
+}
+
+nav ul li a:hover {
+    background-color: #4b4a4a5a;
+    border-radius:10px; /*Redondea el color del hoover*/
+    transition:0.3s; /*retarda la aparicion del color */
+}
+
+p{
+    background-color: #ffffff5a;
+    display: inline-block;
+    font-weight: bold;
+}
+
+button {
+    background-color: #db34349d;
+    color: white;
+    font-size: 16px;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #eb6363cb;
+
+}
+
+
+
+
