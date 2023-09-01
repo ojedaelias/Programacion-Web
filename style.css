@@ -2,22 +2,35 @@
     font-size: 25px;
     font-family: 'Kanit', sans-serif;       
 }
-
+img{
+    width: 100vw;
+    height: 100vh;
+}
 .background{ /*imagen de fondo*/
     position:fixed;
     top: 0;
     background-size: cover; /*Se asegura que la img cubra todo el contenedor*/
     filter: blur(3px); /* Aplica el filtro solo al contenedor de fondo */
     z-index: -1; /* Coloca el contenedor detrás del contenido */
-    
 }
 
+.li__3__content{
+    display:none;
+    position:absolute;
+}
+.li__3:hover .li__3__content{
+    display: block;
+}
 
 header{
     text-align: center;
-    top: 0;
+    margin-top: 0;
 }
 
+.head{
+    position:sticky;
+    top:0;
+}
 
 nav ul{
     list-style-type: none;
@@ -49,7 +62,7 @@ nav ul li a:hover {
 
 p{
     background-color: #ffffff5a;
-    display: inline-block;
+    display: block;
     font-weight: bold;
 }
 
@@ -70,7 +83,24 @@ button:hover{
     background-color: #eb6363cb;
 
 }
+.logo{
+    width: 10vw;
+    height: 10vh;
+    z-index:100;
+}
 
 
+
+
+
+
+
+
+
+
+
+/* Estilo base del menú de navegación */
+
+/* Estilo para el menú desplegable */
 
 
