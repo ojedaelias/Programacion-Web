@@ -55,8 +55,9 @@ button:hover{
 }
 
 span{
+    display:inline;
     font-family: 'Yeseva One', cursive;
-    font-size: 7vw;
+    font-size: 5vw;
     font-weight:lighter;
     margin-left:25vw;
 }
@@ -100,11 +101,5 @@ nav ul li a:hover {
     display: block;
 }
 
-
-
-
-/* Estilo base del menú de navegación */
-
-/* Estilo para el menú desplegable */
 
 
