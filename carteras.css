@@ -22,13 +22,12 @@
 
 /* propiedades de letra */
 .logo,.opciones, .opciones2{
-    font-size: 2vw;
     font-weight: bold;
     color: black;
 }
 
 .logo{
-    padding: 0 0 0 3vw;
+    padding: 0 0 0 0.5em;
     display:flex;
     margin: 0;
     align-items: center;
@@ -39,6 +38,7 @@
     color: black;
     font-family: 'Yeseva One';
     font-weight: lighter;
+    font-size:28px;
 }
 /* Estilo de las opciones del navbar */
 .opciones{
@@ -57,7 +57,7 @@
     height: 5vh;
 }
 .opciones a{
-    font-size: 20px;
+    font-size: 18px;
     padding: 0 1vw;
 }
 .opciones2 a{
@@ -70,7 +70,7 @@
     align-items: center;
     gap: 0.5vw;
     padding-right: 1vw;
-    font-size: 1.5vw;
+    font-size: 20px;
 }
 
 
@@ -121,7 +121,7 @@
 }
 
 @media screen and (max-width: 1199px) {
-    .opciones,.opciones2{
+    /* .opciones,.opciones2{
         display:none;
     }
     
@@ -131,9 +131,13 @@
         align-items: center;
         padding: 0 4vw 0 0;
 
+    } */
+    .opciones2{
+        display:none;   
     }
+
     .navbar {
-        background-color: rgba(0, 0, 0, 0); /* Fondo transparente (puedes ajustar la opacidad) */
+        background-color: rgba(0, 0, 0, 0); 
         position: fixed;
         top: 0;
         left: 0;
@@ -141,10 +145,10 @@
         z-index: 100;
         display: flex; 
         justify-content: space-between;
-        height: 8vh;
+        height: 6vh;
 
     }
-
+/* BOTON MENU
     .menu-button button{
         display:inline;
         font-weight: bold;
@@ -156,18 +160,21 @@
         height: auto;
     }
     .menu-button button:hover{
-        background-color: rgba(57, 57, 57, 0.1); /* Fondo blanco translúcido en hover */
+        background-color: rgba(57, 57, 57, 0.1); 
         border-radius: 15%;
-    }
+    } */
 
     .logo{
-        font-size: 3vh;
-        padding-left: 5vw;
+        padding-left: 8px;
     }
     .logo a{
-        padding: 0 2vw;
+        padding: 0 8px;
+        font-size: 1em;
     }
 
+    .opciones a{
+        font-size: 1.2em;
+    }
     .catalogo{
         display: flex;
         flex-direction: column;
