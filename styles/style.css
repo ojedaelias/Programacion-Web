@@ -2,34 +2,28 @@
     /* font-size: 25px; */
     font-family: 'Kanit', sans-serif;       
 }
-body{
-    margin:0;
-    /* background-image:url() ; */
-    /* background-size: cover; */
-}
+
 
 /* NAVBAR */
+
 .menu-button button,.menu-button{
     display:none
 }
+
 .navbar {
     background-color: rgba(0, 0, 0, 0); /* Fondo transparente (puedes ajustar la opacidad) */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: 1fr; 
-    height: 8vh;
-    /* gap: 0px 0px; */
+    height: 8vh;   
+    
 }
 
 /* propiedades de letra */
 .logo,.opciones, .opciones2{
     font-weight: bold;
     color: black;
+    
 }
 
 .logo{
@@ -44,7 +38,7 @@ body{
     color: black;
     font-family: 'Yeseva One';
     font-weight: lighter;
-    font-size: 28px
+    font-size: 20px
 }
 /* Estilo de las opciones del navbar */
 .opciones{
@@ -62,8 +56,9 @@ body{
     align-items: center;
     height: 5vh;
 }
+
 .opciones a{
-    font-size: 18px;
+    font-size: 14px;
     padding: 0 1vw;
 }
 
@@ -79,7 +74,7 @@ body{
     align-items: center;
     gap: 0.5vw;
     padding-right: 1vw;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 
@@ -102,50 +97,19 @@ body{
 }
 
 
-.background img, .background{
-    height: 100vh;
-    width: 100vw;
+body{
+    background-image: url("https://i.ytimg.com/vi/CWeytgcSpR0/maxresdefault.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
-.background{
-    display: inline;
-    background-size: cover;
-    margin-bottom:50px;
-    padding:0;
-}
+
+
+
 /* ***************************** */
 
-@media screen and (max-width: 1199px) {
-    /* menu desplegable */
-    /* .opciones,.opciones2{
-        display:none;
-    } */
+@media screen and (max-width: 999px) {
 
-    /* .menu-button{
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        padding: 0 4vw 0 0;
-
-    }
-    
-    .menu-button button{
-        display:inline;
-        font-weight: bold;
-        font-size: 2.5vh;
-        border: none;
-        background-color: transparent;
-        padding: 1vw;
-        transition: 0.1s;
-        height: auto;
-    }
-    
-    .menu-button button:hover{
-        background-color: rgba(57, 57, 57, 0.1); /* Fondo blanco translúcido en hover 
-        border-radius: 15%;
-    } */
-    
-    /* resto de pagina */
-    .opciones2{
+    .opciones{
         display:none
     }
 
@@ -162,7 +126,7 @@ body{
     }
 
     .opciones a{
-        font-size: 20px;
+        font-size: 15px;
     } 
     
 
@@ -172,7 +136,7 @@ body{
     }
     .logo a{
         padding: 0 8px;
-        font-size: 1em;
+        font-size: 20px;
 
     }
 
