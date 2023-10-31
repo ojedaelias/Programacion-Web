@@ -11,82 +11,66 @@
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0); /* Fondo transparente (puedes ajustar la opacidad) */
+    background: rgba(201, 85, 255, 0.20); /* Fondo transparente (puedes ajustar la opacidad) */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    height: 8vh;   
+    grid-template-columns: 1fr; 
+    grid-template-rows: 40px 40px; 
+    /* height: 8vh;    */
     
 }
 
 /* propiedades de letra */
-.logo,.opciones, .opciones2{
+.titulo,.opciones, .opciones2{
     font-weight: bold;
     color: black;
     
 }
 
-.logo{
-    padding: 0 0 0 0.5em;
+.titulo{
     display:flex;
-    margin: 0;
+    justify-content: center;
     align-items: center;
+    margin: 0px;
 }
 
-.logo a{
+.titulo a{
     text-decoration: none;
     color: black;
     font-family: 'Yeseva One';
     font-weight: lighter;
-    font-size: 20px
+    font-size: 25px
 }
 /* Estilo de las opciones del navbar */
 .opciones{
     list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    align-items: center;
-    padding: 0 1vw;  
+    display: flex;    
+    justify-content: center;
+  
 } 
 
 .opciones li{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
+    /* width: 100px; */
+    /* height: 5vh; */
 }
 
 .opciones a{
     font-size: 14px;
-    padding: 0 1vw;
+    padding: 0 20px;
 }
 
 
-.opciones2 a{
-    padding: 0 1vw
-}
-
-.opciones2{
-    list-style-type: none;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 0.5vw;
-    padding-right: 1vw;
-    font-size: 15px;
-}
-
-
-.opciones a,.opciones2 a{
+.opciones a{
     text-decoration: none;
     color: black;
     font-weight: bold;
     /* transition: color 1s ease; */
 }
 
-.opciones a:hover,.opciones2 a:hover {
-    background-color: #B6AFE6; /* Fondo blanco translúcido en hover */
+.opciones a:hover{
+    /* background-color: #B6AFE6; Fondo blanco translúcido en hover */
     height: 5vh;
     width: auto;
     border-radius: 15%;
@@ -95,7 +79,6 @@
     justify-content: center;
     transition: 0.2s;
 }
-
 
 body{
     background-image: url("https://i.ytimg.com/vi/CWeytgcSpR0/maxresdefault.jpg");
@@ -130,11 +113,11 @@ body{
     } 
     
 
-    .logo{
+    .titulo{
         padding-left: 8px;
 
     }
-    .logo a{
+    .titulo a{
         padding: 0 8px;
         font-size: 20px;
 

@@ -8,93 +8,71 @@
     display:none
 }
 
-
-
 .navbar {
-    background-color: #8f95d39a; /* Fondo transparente (puedes ajustar la opacidad) */
+    background-color: #b6afe6; /* Fondo transparente (puedes ajustar la opacidad) */
+    display: grid;
+    grid-template-columns: 100vw; 
+    grid-template-rows: auto auto; 
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    height: 8vh;
-    /* gap: 0px 0px; */
+    padding-bottom: 5px;
 }
 
 /* propiedades de letra */
-.logo,.opciones, .opciones2{
-    font-weight: bold;
-    color: black;
-}
 
-.logo{
-    padding: 0 0 0 0.5em;
+
+.titulo{
     display:flex;
-    margin: 0;
+    justify-content: center;
     align-items: center;
+    margin: 0px;
 }
 
-.logo a{
+.titulo a{
     text-decoration: none;
     color: black;
     font-family: 'Yeseva One';
     font-weight: lighter;
-    font-size:25px;
+    font-size: 40px;
+    padding: 10px 0;
 }
 /* Estilo de las opciones del navbar */
 .opciones{
     list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    align-items: center;
-    padding: 0 1vw;  
+    display: flex;    
+    justify-content: center;
+  
 } 
 
 .opciones li{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
+    /* width: 100px; */
+    /* height: 5vh; */
 }
+
 .opciones a{
-    font-size: 14px;
-    padding: 0 1vw;
-}
-.opciones2 a{
-    padding: 0 1vw
-}
-.opciones2{
-    list-style-type: none;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 0.5vw;
-    padding-right: 1vw;
-    font-size: 15px;
-}
-
-
-.opciones a,.opciones2 a{
+    font-family:'Source Serif Pro';
     text-decoration: none;
     color: black;
-    font-weight: bold;
+    font-weight:lighter;
+    font-size: 12px;
+    padding: 10px 20px;
     /* transition: color 1s ease; */
 }
 
-.opciones a:hover,.opciones2 a:hover {
-    background-color: #B6AFE6; /* Fondo blanco translúcido en hover */
+.opciones a:hover{
+    /* background-color: #B6AFE6; Fondo blanco translúcido en hover */
     height: 5vh;
     width: auto;
-    border-radius: 10px ; 
+    border-radius: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.2s;
 }
+
 /* catalogos */
 .catalogo{
     display: grid;
@@ -112,15 +90,23 @@
     font-size: 8px;
     padding: 4px;
 }
+
 .precio{
     font-size: 10px;
 }
 
-.card img{
+.imagen_container{
     height: 200px;
     width: 200px;
-    border-bottom: 1px solid gray;
     background-color: rgba(128, 128, 128, 0.116);
+    
+}
+
+.card img{
+    height: 100px;
+    width: 100px;
+    /* border-bottom: 1px solid gray; */
+    /* background-color: rgba(128, 128, 128, 0.116); */
     
 }
 
