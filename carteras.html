@@ -36,7 +36,7 @@
 
                         <div class="search-container">
                             <div class="search-bar" id="search-bar">
-                                <input type="text" placeholder="Buscar...">
+                                <input  class="buscador" type="text" placeholder="Buscar...">
                             </div>
                         </div>
 
@@ -47,37 +47,49 @@
             </nav>    
             
             <div class="catalogo">
-                <section class="card">
-                    <img src="/images/cartera1.jpg" alt="Producto 1">
+                <section class="card" data-id="1" data-nombre="Cartera Lunaime2" data-precio="20">
+                    <div class="contenedor-imagen">
+                        <img src="/images/cartera1.jpg" alt="Producto 1">   
+                        <div class="confirmacion">&#10003;</div>                  
+                    </div>
+
                     <h2>Nombre</h2>
                     <div class="precio">$20</div>
+                    <button class="boton-confirmacion" onclick="agregarAlCarrito(this)">Agregar Al carrito &#43;</button>
+    
                 </section>
                 
-                <section class="card">
-                    <img src="/images/cartera2.jpg" alt="Producto 1">
+                <section class="card" data-id="2" data-nombre="" data-precio="20">
+                    <div class="contenedor-imagen">
+                        <img src="/images/cartera2.jpg" alt="Producto 1">
+                        <div class="confirmacion">&#10003;</div>                  
+                    </div>
+                    
                     <h2>Producto 2</h2>
                     <div class="precio">$20</div>
+                    <button onclick="agregarAlCarrito(this)">Agregar Al carrito</button>
+
                 </section>
 
-                <section class="card">
+                <section class="card" data-id="3" data-nombre="" data-precio="20">
                     <img src="/images/cartera3.jpg" alt="Producto 1">
                     <h2>Producto 3</h2>
                     <span class="precio">$20</span>
                 </section>
                 
-                <section class="card">
+                <section class="card" data-id="4" data-nombre="" data-precio="20">
                     <img src="/images/cartera4.jpg" alt="Producto 1">
                     <h2>Producto 4</h2>
                     <span class="precio">$20</span>
                 </section>
                 
-                <section class="card">
+                <section class="card" data-id="5" data-nombre="" data-precio="20">
                     <img src="/images/cartera5.jpg" alt="Producto 1">
                     <h2>Producto 5</h2>
                     <span class="precio">$20</span>
                 </section>
                 
-                <section class="card">
+                <section class="card" data-id="6" data-nombre="" data-precio="20">
                     <div class="imagen_container">
                     <img src="/images/cartera6.jpg" alt="">
                     </div>
