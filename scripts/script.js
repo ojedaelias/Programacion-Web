@@ -6,41 +6,50 @@
 const searchIcon = document.getElementById("lupa-icon");
 const searchBar = document.getElementById("search-bar");
 
-let isMoved=false;
-searchIcon.addEventListener("click", function() {
-    searchBar.style.right = searchBar.style.right === "0px" ? "-400px" : "0px";
+// let isMoved=false;
+// searchIcon.addEventListener("click", function() {
+//     searchBar.style.left = searchBar.style.left === "0px" ? "-400px" : "0px";
     
-    if (!isMoved) {
-        searchIcon.style.transform = "translateX(-200px)";
-        isMoved = true;
-    } else {
-        searchIcon.style.transform = "translateX(0)";
-        isMoved = false;
-    }
-});
+//     if (!isMoved) {
+//         searchIcon.style.transform = "translateX(-200px)";
+//         isMoved = true;
+//     } else {
+//         searchIcon.style.transform = "translateX(0)";
+//         isMoved = false;
+//     }
+// });
 
 
 //------------>Carrito
+ 
 let carrito = [];
+let carritoBtn = document.getElementById('imgCarrito')
+carritoBtn.addEventListener('click',function(){
+    alert('click')
+})
 
 function agregarAlCarrito(button){
-    const producto = button.parentElement;
+    let contadorCarrito = document.getElementById('cart_menu_num') 
+
+    const producto = button.closest('.card'); // closest busca el elemento mas cercano al boton con la clase puesta
+    
     const id = producto.dataset.id;
     const nombre = producto.dataset.nombre;
     const precio = parseFloat(producto.dataset.precio);
-    const imagen = producto.querySelector('img');
-    const productoSeleccionado = {id, nombre, precio};
+    const imagen = producto.querySelector('.producto');
+    
     const confirmacion = producto.querySelector('.confirmacion');
-    
-    carrito.push(productoSeleccionado);
 
+    carrito.push({id, nombre, precio});
+    contador(contadorCarrito);
+    contadorCarrito.style.opacity = '1';
     
-    confirmacion.style.display = 'block';
     imagen.style.filter = 'blur(3px)';
-
+    confirmacion.style.display = 'block';
+    
     setTimeout(() => {
         confirmacion.style.opacity = '1';
-        }, 100);
+        }, 300);
 
     setTimeout(() => {
         confirmacion.style.opacity = '0';
@@ -51,6 +60,15 @@ function agregarAlCarrito(button){
         }, 500);
         }, 1000);
     
-    console.log(`¡${productoSeleccionado} ha sido agregado al carrito!`);
+    
+    // console.log(`¡${nombre} ha sido agregado al carrito!`)
+        
+
+
 }
 
+function contador(contadorCarrito){
+    let tamañoCarrito = carrito.length 
+    let valorMostrar = tamañoCarrito <= 9 ? tamañoCarrito : '9+';
+    contadorCarrito.textContent = valorMostrar.toString();
+}

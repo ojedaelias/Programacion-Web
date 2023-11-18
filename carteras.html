@@ -15,13 +15,30 @@
         <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
         <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
         
-        <link rel="Icon" href="lunaime_logo.ico/images">
+        <link rel="Icon" href="./images/lunaime-logo.ico">
     </head>
 
     <body>
         <div class="background">
-            <nav class="navbar">
-                <h1 class="titulo"><a href="#" id="titulo">Lunaime</a></h1>
+            <nav class="navbar">          
+                    <h1 class="titulo">
+                        <a href="#" id="titulo">Lunaime</a>
+                        <div class="carrito">
+                            <span class="cartListContainer">
+                                <ul class="cartList">
+                                    <li><button class="btnDelete">X</button></li>
+                                    <li>Barcelona   Negro    $20000</li>
+                                    <li>aasdasdasdasds</li>
+                                    <li>aaBBBsdasds</li>
+                                    <li>aasda123</li>
+                                    <li>Total </li> 
+                                </ul>
+                            </span>
+                            <span id="cart_menu_num" data-action="cart-can" class="roundedCounter">0</span>
+                            <img id="imgCarrito" src="./images/carrito.png">
+                            
+                        </div>
+                    </h1>
                 <section class="menu">
                     <ul class="opciones">
                         <li><a href="#">Carteras</a></li>
@@ -30,6 +47,7 @@
                         <li><a href="#">Lencería</a></li>
                         <li><a href="#">Acerca de Nosotros</a></li>
                         <li><a href="#">Redes</a></li>
+                        
                         <div class="search" id="lupa-icon">
                             <img class="lupa"  src="/images/lupa.png" alt="Search Icon" width="20" height="20">
                         </div>
@@ -43,54 +61,60 @@
                     </ul>
                 </section>
                 
+                
+            </nav>
+  
 
-            </nav>    
-            
             <div class="catalogo">
-                <section class="card" data-id="1" data-nombre="Cartera Lunaime2" data-precio="20">
+                
+                <section class="card" id="cards" data-id="1" data-nombre="Cartera Lunaime2" data-precio="20">
                     <div class="contenedor-imagen">
-                        <img src="/images/cartera1.jpg" alt="Producto 1">   
-                        <div class="confirmacion">&#10003;</div>                  
+                        <img class="producto" id="producto" src="/images/cartera1.jpg" alt="Producto 1">   
+                        <div class="confirmacion" id="confirmacion">&#10003;</div>                  
                     </div>
 
-                    <h2>Nombre</h2>
-                    <div class="precio">$20</div>
-                    <button class="boton-confirmacion" onclick="agregarAlCarrito(this)">Agregar Al carrito &#43;</button>
-    
+                    <div class="descripcion">
+                        <h2>Barcelona</h2> 
+                        <button class="botonAgregarCarrito" id="botonCarrito" onclick="agregarAlCarrito(this)"><img src="./images/anadir-a-la-cesta.png" alt=""></button>
+                        <div class="precio">$2000</div>
+                        <div class="precio" >Color</div>
+                    </div>
                 </section>
                 
-                <section class="card" data-id="2" data-nombre="" data-precio="20">
+                <section class="card" id="cards" data-id="2" data-nombre="ca" data-precio="20">
                     <div class="contenedor-imagen">
-                        <img src="/images/cartera2.jpg" alt="Producto 1">
+                        <img class="producto" src="/images/cartera2.jpg" alt="Producto 1">
                         <div class="confirmacion">&#10003;</div>                  
                     </div>
-                    
-                    <h2>Producto 2</h2>
-                    <div class="precio">$20</div>
-                    <button onclick="agregarAlCarrito(this)">Agregar Al carrito</button>
 
+                    <div class="descripcion">
+                        <h2>Producto 2</h2>
+                        <button class="botonAgregarCarrito" id="botonCarrito" onclick="agregarAlCarrito(this)"><img src="./images/anadir-al-carrito.png" alt=""></button>
+                        <div class="precio">$20</div>
+                    </div>
+                    
                 </section>
 
                 <section class="card" data-id="3" data-nombre="" data-precio="20">
-                    <img src="/images/cartera3.jpg" alt="Producto 1">
+                    <img class="producto" src="/images/cartera3.jpg" alt="Producto 1">
                     <h2>Producto 3</h2>
                     <span class="precio">$20</span>
                 </section>
                 
                 <section class="card" data-id="4" data-nombre="" data-precio="20">
-                    <img src="/images/cartera4.jpg" alt="Producto 1">
+                    <img class="producto" src="/images/cartera4.jpg" alt="Producto 1">
                     <h2>Producto 4</h2>
                     <span class="precio">$20</span>
                 </section>
                 
                 <section class="card" data-id="5" data-nombre="" data-precio="20">
-                    <img src="/images/cartera5.jpg" alt="Producto 1">
+                    <img class="producto" src="/images/cartera5.jpg" alt="Producto 1">
                     <h2>Producto 5</h2>
                     <span class="precio">$20</span>
                 </section>
                 
                 <section class="card" data-id="6" data-nombre="" data-precio="20">
-                    <div class="imagen_container">
+                    <div class="producto" class="imagen_container">
                     <img src="/images/cartera6.jpg" alt="">
                     </div>
                     <h2>Producto 6</h2>

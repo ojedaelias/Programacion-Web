@@ -1,7 +1,8 @@
 /* NAVBAR */
 *{
     /* font-size: 25px; */
-    font-family: 'Kanit', sans-serif;       
+    font-family: 'Kanit', sans-serif;   
+    box-sizing: border-box;    
 }
 
 .menu-button button,.menu-button{
@@ -44,7 +45,7 @@
 /* Estilo de las opciones del navbar */
 .search{
     position: absolute;
-    right: 25px;
+    left: 10px;
     bottom: 15px;
     display:flex;
     align-items: center;
@@ -117,7 +118,7 @@
     position:relative;
 }
 
-.card img{
+.producto{
     height: 300px;
     width: 215px;
     padding-bottom:10px;
@@ -125,7 +126,7 @@
     transition: filter 0.5s ease-in-out ; 
 }
 
-.card img:hover{
+.producto:hover{
     transform: scale(1.02);
     transition:200ms;
 }
@@ -150,11 +151,12 @@
 }
 
 .search-bar {
+    display:none;
     position: absolute;
-    /* top: 0; */
-    right: -180px; /* Posición inicial oculta */
+    left: 0px; /* Posición inicial oculta */
     transition: right 0.3s ease;
     width: 200px;
+    border-radius: 50%;
 }
 
 .search-bar input[type="text"] {
@@ -164,8 +166,13 @@
     width: 100%;
 }
 
+.card h2{
+    display: inline-block;
+}
+
 
 .confirmacion {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -173,13 +180,94 @@
     font-size: 80px;
     color: #b6afe6;;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    display: none;
+    transition: opacity 0.8s ease;
+    
     /* -webkit-text-stroke: 1px #21112C; Borde alrededor del texto */
     /* color: transparent; Oculta el color del texto */
   }
+  .descripcion{
+    position: relative;
+  }
+  .botonAgregarCarrito{
+    position:absolute;
+    top:0;
+    right:0;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: none;
+    align-content: center;
+    height: auto;
+    width: 25px;
+ 
+}
+  .botonAgregarCarrito img{
+    width: 30px;
+    height: auto;
+    
+  }
+
+ .roundedCounter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0px;
+    font-size: 15px
+  }
+
+.carrito img{
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+.carrito{
+    width: 40px;
+    height: auto;
+    position: absolute;
+    right: 25px;
+    display: flex;
+    justify-content:start;
+    font-size: 30px;
+}
 
 
+.cartListContainer{
+    background-color: white;
+    position:absolute;
+    right:40px;
+    max-height: 100px; 
+    /* overflow-y:auto;  */
+
+}
+
+.btnDelete{
+    border: 1px solid gray;
+    border-radius: 4px;
+    cursor:pointer;
+}
+.cartList{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+.cartList li{
+    border: 1px solid rgb(221, 221, 221);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 20px;
+    width: 300px;
+    height: auto;
+    /* text-align: end; */
+}
 
 @media screen and (max-width: 1000px) {
 
