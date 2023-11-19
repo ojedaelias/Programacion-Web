@@ -24,15 +24,15 @@
                     <h1 class="titulo">
                         <a href="#" id="titulo">Lunaime</a>
                         <div class="carrito">
-                            <span class="cartListContainer">
-                                <ul class="cartList">
-                                    <li><button class="btnDelete">X</button></li>
-                                    <li>Barcelona   Negro    $20000</li>
-                                    <li>aasdasdasdasds</li>
-                                    <li>aaBBBsdasds</li>
-                                    <li>aasda123</li>
-                                    <li>Total </li> 
+                            <span class="cartListContainer" id="cartListContainer">
+                                <ul class="cartList" id="cartList">
+                                    
                                 </ul>
+                                <div class="total" >
+                                    <span>Total:</span> 
+                                    <span id="totalPrecio">$0</span>    
+                                    <!-- <button onclick="clearAll(this)">x</button> -->
+                                </div>
                             </span>
                             <span id="cart_menu_num" data-action="cart-can" class="roundedCounter">0</span>
                             <img id="imgCarrito" src="./images/carrito.png">
@@ -77,7 +77,7 @@
                         <h2>Barcelona</h2> 
                         <button class="botonAgregarCarrito" id="botonCarrito" onclick="agregarAlCarrito(this)"><img src="./images/anadir-a-la-cesta.png" alt=""></button>
                         <div class="precio">$2000</div>
-                        <div class="precio" >Color</div>
+                        <div class="color" >Color</div>
                     </div>
                 </section>
                 
@@ -88,37 +88,71 @@
                     </div>
 
                     <div class="descripcion">
-                        <h2>Producto 2</h2>
+                        <h2>Madrid</h2>
                         <button class="botonAgregarCarrito" id="botonCarrito" onclick="agregarAlCarrito(this)"><img src="./images/anadir-al-carrito.png" alt=""></button>
-                        <div class="precio">$20</div>
+                        <div class="precio">$5000</div>
+                        <div class="color" >Color</div>
                     </div>
                     
                 </section>
 
                 <section class="card" data-id="3" data-nombre="" data-precio="20">
-                    <img class="producto" src="/images/cartera3.jpg" alt="Producto 1">
-                    <h2>Producto 3</h2>
-                    <span class="precio">$20</span>
+                    <div class="contenedor-imagen">
+                        <img class="producto" src="/images/cartera3.jpg" alt="Producto 1">
+                        <div class="confirmacion" id="confirmacion">&#10003;</div>
+                    </div>
+                    
+
+                    <div class="descripcion">
+                        <h2>Roma</h2>
+                        <button class="botonAgregarCarrito" id="botonCarrito" onclick="agregarAlCarrito(this)"><img src="./images/anadir-a-la-cesta.png" alt=""></button>
+                        <div class="precio">$3200</div>
+                        <div class="color" >Color</div>
+                    </div>
+                    
                 </section>
                 
                 <section class="card" data-id="4" data-nombre="" data-precio="20">
-                    <img class="producto" src="/images/cartera4.jpg" alt="Producto 1">
-                    <h2>Producto 4</h2>
-                    <span class="precio">$20</span>
+                    <div class="contenedor-imagen">
+                        <img class="producto" src="/images/cartera4.jpg" alt="Producto 1">
+                        <div class="confirmacion" id="confirmacion">&#10003;</div>
+                    </div>
+
+                    <div class="descripcion">
+                        <h2>Praga</h2>
+                        <button class="botonAgregarCarrito" id="botonCarrito" onclick="agregarAlCarrito(this)"><img src="./images/anadir-a-la-cesta.png" alt=""></button>
+                        <div class="precio">$4200</div>
+                        <div class="color" >Color</div>    
+                    </div>    
                 </section>
                 
                 <section class="card" data-id="5" data-nombre="" data-precio="20">
-                    <img class="producto" src="/images/cartera5.jpg" alt="Producto 1">
-                    <h2>Producto 5</h2>
-                    <span class="precio">$20</span>
+                    <div class="contenedor-imagen">
+                        <img class="producto" src="/images/cartera5.jpg" alt="Producto 1">
+                        <div class="confirmacion" id="confirmacion">&#10003;</div>
+                    </div>
+
+                    <div class="descripcion">
+                        <h2>Monaco</h2>
+                        <button class="botonAgregarCarrito" id="botonCarrito" onclick="agregarAlCarrito(this)"><img src="./images/anadir-a-la-cesta.png" alt=""></button>
+                        <div class="precio">$5800</div>
+                        <div class="color" >Color</div>    
+                    </div>
                 </section>
                 
                 <section class="card" data-id="6" data-nombre="" data-precio="20">
-                    <div class="producto" class="imagen_container">
-                    <img src="/images/cartera6.jpg" alt="">
+                    <div class="contenedor-imagen">
+                        <img class="producto" src="/images/cartera6.jpg" alt="">
+                        <div class="confirmacion" id="confirmacion">&#10003;</div>
                     </div>
-                    <h2>Producto 6</h2>
-                    <span class="precio">$20</span>
+
+                    <div class="descripcion" >
+                        <h2>Buenos Aires</h2>
+                        <button class="botonAgregarCarrito" id="botonCarrito" onclick="agregarAlCarrito(this)"><img src="./images/anadir-a-la-cesta.png" alt=""></button>
+                        <div class="precio">$8350</div>
+                        <div class="color" >Color</div>    
+                    </div>
+
                 </section>
                 
                 <div class="instagram">

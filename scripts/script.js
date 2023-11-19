@@ -24,24 +24,39 @@ const searchBar = document.getElementById("search-bar");
  
 let carrito = [];
 let carritoBtn = document.getElementById('imgCarrito')
+
 carritoBtn.addEventListener('click',function(){
-    alert('click')
-})
+    let listaCarrito = document.getElementById('cartListContainer');
+    let opacidadActual = parseFloat(getComputedStyle(listaCarrito).opacity);
+
+    listaCarrito.style.opacity = opacidadActual === 1 ? 0 : 1;
+});
+
 
 function agregarAlCarrito(button){
     let contadorCarrito = document.getElementById('cart_menu_num') 
-
-    const producto = button.closest('.card'); // closest busca el elemento mas cercano al boton con la clase puesta
     
-    const id = producto.dataset.id;
-    const nombre = producto.dataset.nombre;
-    const precio = parseFloat(producto.dataset.precio);
-    const imagen = producto.querySelector('.producto');
     
-    const confirmacion = producto.querySelector('.confirmacion');
+    const card = button.closest('.card'); // closest busca el elemento mas cercano al boton con la clase puesta
+    
+    const id = card.dataset.id;
+    const nombre = card.querySelector('h2').innerHTML;
+    const precio = card.querySelector('.precio').innerHTML;
+    const color = card.querySelector('.color').innerHTML;
+    const imagen = card.querySelector('.producto'); 
+    const confirmacion = card.querySelector('.confirmacion');
 
-    carrito.push({id, nombre, precio});
+    let producto = {id, nombre, color, precio}; 
+    // ``
+    sumarTotal(precio);
+
+    carrito.push(producto);
+
+    agregarLista(producto); 
+    
     contador(contadorCarrito);
+
+    
     contadorCarrito.style.opacity = '1';
     
     imagen.style.filter = 'blur(3px)';
@@ -71,4 +86,38 @@ function contador(contadorCarrito){
     let tamañoCarrito = carrito.length 
     let valorMostrar = tamañoCarrito <= 9 ? tamañoCarrito : '9+';
     contadorCarrito.textContent = valorMostrar.toString();
+}
+
+function agregarLista(producto){
+    let lista = document.getElementById("cartList");
+    lista.innerHTML += `<li>${producto.nombre} ${producto.color} ${producto.precio} <button class="btnDelete" onclick="deleteProduct(this)">X</button></li>`;
+}
+
+function sumarTotal(precio){
+    let total = document.getElementById('totalPrecio')
+    let totalPrecio = Number(total.innerHTML.substring(1))
+
+    totalPrecio += Number(precio.substring(1));
+    total.textContent = `$ ${totalPrecio}`; 
+}
+
+function deleteProduct(button){
+    let texto = button.closest('li').textContent;
+    let precio = texto.match(/\$\d+/)
+    let total = document.getElementById('totalPrecio')
+    let totalPrecio = Number(total.innerHTML.substring(1))
+
+    totalPrecio -= Number(precio[0].substring(1));
+    total.textContent = `$ ${totalPrecio}`; 
+    button.closest('li').remove();
+
+}
+
+function clearAll(button){
+    let lista = documment.getElementById('cartList');
+    let productos = lista.querySelectorAll('li');
+
+    productos.forEach(function(elemento){
+        elemento.remove();
+    });
 }

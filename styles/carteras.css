@@ -243,10 +243,16 @@
 .cartListContainer{
     background-color: white;
     position:absolute;
-    right:40px;
+    top:2px;
+    right:50px;
     max-height: 100px; 
-    /* overflow-y:auto;  */
-
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 4px;
+    /* border: 1px solid rgb(221, 221, 221); */
+    overflow-y: auto;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 .btnDelete{
@@ -259,10 +265,14 @@
     padding:0;
     margin:0;
 }
-.cartList li{
+.total{
+    
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.cartList li,.total {
     border: 1px solid rgb(221, 221, 221);
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+
     font-size: 20px;
     width: 300px;
     height: auto;
